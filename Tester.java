@@ -1,3 +1,5 @@
+
+
 public class Tester {
     private int nTestCases;
     private int nPassed;
@@ -13,6 +15,18 @@ public class Tester {
     private int currQuestionpoints;
     private int points;
 
+    public static void main(String[] args) {
+        Tester tester = new Tester();
+        
+        // Example test cases
+        tester.test("Input 1", 5, 5);         // Test with integers
+        tester.test("Input 2", true, true);  // Test with booleans
+        tester.test("Input 3", "abc", "abc"); // Test with strings
+    
+        // Display results
+        tester.showAll();
+        tester.conclusion();
+    }
     public Tester() {
         this.nTestCases = 0;
         this.nPassed = 0;
